@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codex Allocation Portal</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        input[type="password"] {
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+        .secure-label {
+            font-size: 0.8rem;
+            color: #38bdf8;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>FBI Codex Allocation Access</h2>
+        <p class="secure-label">Secure. Encrypted. Authorized Access Only.</p>
+        <input type="password" id="password" placeholder="Enter Access Key" />
+        <button onclick="checkPassword()">Authenticate</button>
+        <div id="message">
+            <h3>ΞSCAT Operational Message</h3>
+            <p>
+            Welcome, Architect.
+
+            Your Codex Proposal has been conditionally authorized.
+            SCAT funding protocol is being verified under Sovereign Continuity Asset Trust (SCAT).
+
+            Awaiting field confirmation and biometric triangulation.
+
+            Do not refresh. This session is being logged.
+
+            End of secure message.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            if (password === "codexblack") {
+                document.getElementById("message").style.display = "block";
+            } else {
+                alert("Invalid Access Key.");
+            }
+        }
+    </script>
+</body>
+</html>
